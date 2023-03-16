@@ -1,4 +1,5 @@
-'use strict',
+/* eslint-disable no-console */
+
 
 const restaurant = {
     name: 'Classico Italiano',
@@ -38,11 +39,11 @@ console.log(newMenu);
 
 // Copy array
 
-const mainMenuCopy = [...restaurant.mainMenu];
+
 
 // Join 2 arrays
 
-let menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 console.log(menu);
 
 // Iterables: arrays, strings, maps, sets. NOT objects
@@ -78,7 +79,7 @@ console.log(restaurantCopy.name);
 console.log(restaurant.name);
 
   
-///////////////////////////////////////
+
 // Destructuring Objects
 
 restaurant.orderDelivery({
@@ -106,7 +107,7 @@ restaurant.orderDelivery({
   // Default values
 
   const { Menu = [], starterMenu: starters = [] } = restaurant;
-  console.log(menu, starters);
+  console.log(Menu, starters);
 
   // Mutating variables
 
@@ -118,16 +119,10 @@ restaurant.orderDelivery({
 
   
 
-  ///////////////////////////////////////
+  
   // Destructuring Arrays
 
-  const array = [2, 3, 4];
-  const a = array[0];
-  const b = array[1];
-  const c = array[2];
-  const [x, y, z] = arr;
-  console.log(x, y, z);
-  console.log(arr);
+  
 
   let [main, , secondary] = restaurant.categories;
   console.log(main, secondary);
