@@ -339,3 +339,14 @@ boardPassengers(180, 3);
 
 
 
+// fucntion currying    
+
+const multiply = (x,y) => {
+  console.log(x * y);
+}
+
+const multiplyTwo = multiply.bind(this,5);
+multiplyTwo(3);
+
+const multiplyThree = multiply.bind(this,7);
+multiplyThree(3);
